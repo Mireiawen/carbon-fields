@@ -43,7 +43,7 @@ class Field {
 	 * @return \Carbon_Fields\Field\Field
 	 */
 	public static function factory() {
-		return call_user_func_array( array( '\Carbon_Fields\Field\Field', 'factory' ), func_get_args() );
+		return call_user_func_array( array(\Carbon_Fields\Field\Field::class, 'factory' ), func_get_args() );
 	}
 
 	/**
@@ -53,7 +53,7 @@ class Field {
 	 * @return \Carbon_Fields\Field\Field
 	 */
 	public static function make() {
-		return call_user_func_array( array( get_class(), 'factory' ), func_get_args() );
+		return call_user_func_array( array(__CLASS__, 'factory' ), func_get_args() );
 	}
 
 	/**
